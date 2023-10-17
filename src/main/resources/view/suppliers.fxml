@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="705.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.Suppliers">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="1027.0" layoutX="-2.0" layoutY="-4.0">
+         <image>
+            <Image url="@../assets/shop%20image.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="631.0" layoutX="30.0" layoutY="52.0" opacity="0.84" stroke="WHITE" strokeType="INSIDE" width="959.0" />
+      <Rectangle arcHeight="52.0" arcWidth="52.0" fill="#eee2e2" height="80.0" layoutX="30.0" layoutY="24.0" stroke="#fffafa" strokeType="INSIDE" width="959.0" />
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="49.0" layoutY="33.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+      </ImageView>
+      <Text fill="#1e1d1d" layoutX="114.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="suppilier DashBoard">
+         <font>
+            <Font name="Algerian" size="71.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="891.0" layoutY="35.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+      </ImageView>
+      <JFXTreeTableView layoutX="446.0" layoutY="115.0" prefHeight="253.0" prefWidth="497.0">
+         <columns>
+            <TreeTableColumn fx:id="supp_id" prefWidth="67.0" text="Id" />
+            <TreeTableColumn fx:id="title" prefWidth="64.0" text="Title" />
+            <TreeTableColumn fx:id="name" prefWidth="93.0" text="Name" />
+            <TreeTableColumn fx:id="companyColunm" prefWidth="148.0" text="COMPANY" />
+            <TreeTableColumn fx:id="contactColunm" prefWidth="128.0" text="CONTACT" />
+            <TreeTableColumn fx:id="nic1" prefWidth="148.0" text="COMPANY" />
+         </columns>
+      </JFXTreeTableView>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#343b40" height="72.0" layoutX="46.0" layoutY="380.0" stroke="#e1d0d0" strokeType="INSIDE" width="924.0" />
+      <JFXButton fx:id="printBtn" layoutX="129.0" layoutY="393.0" onAction="#printBtnOnActionListner" prefHeight="46.0" prefWidth="164.0" style="-fx-background-color: #05c46b;" text="PRINT">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearBtn" layoutX="312.0" layoutY="393.0" onAction="#clearBtnOnActionListner" prefHeight="46.0" prefWidth="164.0" style="-fx-background-color: #ffdd59;" text="CLEAR">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="saveBtn" layoutX="496.0" layoutY="393.0" onAction="#saveBtnOnActionListner" prefHeight="46.0" prefWidth="177.0" style="-fx-background-color: #4bcffa;" text="SAVE">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deleteBtn" layoutX="694.0" layoutY="393.0" onAction="#deleteBtnOnActionListner" prefHeight="46.0" prefWidth="190.0" style="-fx-background-color: #ef5777;" text="DELETE">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="894.0" layoutY="387.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+         <effect>
+            <Glow level="0.97" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="64.0" layoutY="387.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </ImageView>
+      <Text layoutX="64.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUPPLIER ID     :" wrappingWidth="205.0">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="64.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TYPE                   :" wrappingWidth="205.0">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="typeCmbBox" layoutX="256.0" layoutY="507.0" prefHeight="25.0" prefWidth="138.0" promptText="Select Type" />
+      <Text layoutX="64.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUPPLIER NAME   :" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="suppName" layoutX="293.0" layoutY="548.0" prefHeight="25.0" prefWidth="138.0" promptText="Name" />
+      <Text layoutX="64.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTACT               :" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="contact" layoutX="293.0" layoutY="596.0" prefHeight="25.0" prefWidth="138.0" promptText="Contact" />
+      <Text layoutX="461.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company          :" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="company" layoutX="651.0" layoutY="476.0" prefHeight="25.0" prefWidth="138.0" promptText="Company" />
+      <Text layoutX="461.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email                :" wrappingWidth="211.0">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="email" layoutX="651.0" layoutY="514.0" prefHeight="25.0" prefWidth="138.0" promptText="email" />
+      <Rectangle arcHeight="60.0" arcWidth="60.0" height="58.0" layoutX="46.0" layoutY="115.0" opacity="0.35" stroke="#8d2828" strokeType="INSIDE" width="383.0" />
+      <JFXTextField fx:id="SearchTxtFeild" focusColor="#03ff29" layoutX="234.0" layoutY="122.0" prefHeight="44.0" prefWidth="170.0" promptText="supplier" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <Text fill="#463412" layoutX="57.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search         :">
+         <font>
+            <Font name="Times New Roman" size="31.0" />
+         </font>
+      </Text>
+      <Separator layoutX="440.0" layoutY="473.0" orientation="VERTICAL" prefHeight="177.0" prefWidth="6.0" />
+      <ImageView fitHeight="69.0" fitWidth="71.0" layoutX="743.0" layoutY="577.0">
+         <image>
+            <Image url="@../assets/delete.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXButton fx:id="backBtn" layoutX="807.0" layoutY="588.0" onAction="#backBtnOnActionListner" prefHeight="48.0" prefWidth="120.0" style="-fx-background-color: #f53b57;" text="Back">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXTextField fx:id="lblSuppId" layoutX="258.0" layoutY="469.0" prefHeight="25.0" prefWidth="138.0" promptText="id" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="707.0" prefWidth="1072.0" style="-fx-background-color: #485460;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PlaceOrder">
+   <children>
+      <ImageView fitHeight="714.0" fitWidth="1075.0" layoutX="-3.0" layoutY="-3.0">
+         <image>
+            <Image url="@../assets/shirt-mockup-concept-with-plain-clothing%20(1).jpg" />
+         </image>
+         <effect>
+            <MotionBlur />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="638.0" layoutX="32.0" layoutY="54.0" opacity="0.84" stroke="WHITE" strokeType="INSIDE" width="1025.0" />
+      <ScrollPane layoutX="116.0" layoutY="96.0" prefHeight="242.0" prefWidth="895.0">
+         <content>
+            <JFXTreeTableView prefHeight="253.0" prefWidth="887.0">
+               <columns>
+                  <TreeTableColumn prefWidth="89.0" text="Item Code" />
+                  <TreeTableColumn prefWidth="264.0" text="Description" />
+                  <TreeTableColumn prefWidth="52.0" text="Qty" />
+                  <TreeTableColumn prefWidth="91.0" text="Unt price" />
+                  <TreeTableColumn prefWidth="129.0" text="Date" />
+                  <TreeTableColumn prefWidth="84.0" text="Type" />
+                  <TreeTableColumn prefWidth="58.0" text="Size" />
+                  <TreeTableColumn prefWidth="119.0" text="Amount" />
+               </columns>
+            </JFXTreeTableView>
+         </content>
+      </ScrollPane>
+      <Text layoutX="60.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee  :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="empCmbBox" layoutX="172.0" layoutY="442.0" prefHeight="25.0" prefWidth="110.0" promptText="Select Id" />
+      <JFXTextField fx:id="empName" layoutX="298.0" layoutY="442.0" prefHeight="25.0" prefWidth="155.0" promptText="Name" />
+      <Text layoutX="60.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name    :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="cusNAme" layoutX="235.0" layoutY="489.0" prefHeight="25.0" prefWidth="220.0" promptText="Name" />
+      <Text layoutX="60.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Contact :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="cusContactTxtFeild" layoutX="235.0" layoutY="524.0" prefHeight="25.0" prefWidth="220.0" promptText="Contact" />
+      <Text layoutX="60.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Email    :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="cusEmailTxtFeild" layoutX="235.0" layoutY="565.0" prefHeight="25.0" prefWidth="220.0" promptText="customer@gmail.com" />
+      <Text layoutX="61.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date                       :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="dateTxtFeild" layoutX="235.0" layoutY="606.0" promptText="2023-10-07" />
+      <Text layoutX="60.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment                 :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXCheckBox fx:id="cashCheckBox" layoutX="244.0" layoutY="649.0" text="CASH" />
+      <JFXCheckBox fx:id="cardCheckBox" layoutX="317.0" layoutY="649.0" text="CARD" />
+      <Separator layoutX="469.0" layoutY="437.0" orientation="VERTICAL" prefHeight="234.0" prefWidth="6.0" />
+      <Text layoutX="486.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID      :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="orderIdTxtBox" layoutX="609.0" layoutY="442.0" prefHeight="25.0" prefWidth="155.0" promptText="Name" />
+      <Text layoutX="486.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Code     :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="itemCodeCmbBox" layoutX="610.0" layoutY="477.0" prefHeight="25.0" prefWidth="155.0" promptText="Select Code" />
+      <Text layoutX="486.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description   :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="descriptionTxtFeild" layoutX="609.0" layoutY="512.0" prefHeight="25.0" prefWidth="155.0" promptText="description" />
+      <Text layoutX="489.0" layoutY="573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QTY             :    ">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <Spinner fx:id="qtySpinner" layoutX="609.0" layoutY="553.0" />
+      <Text layoutX="487.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type             :    ">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="487.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size              :    ">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="typeCmbBox" layoutX="611.0" layoutY="594.0" prefHeight="25.0" prefWidth="149.0" promptText="Select Type" />
+      <JFXComboBox fx:id="sizeCmbBox" layoutX="613.0" layoutY="633.0" prefHeight="25.0" prefWidth="149.0" promptText="Select Size" />
+      <Separator layoutX="783.0" layoutY="437.0" orientation="VERTICAL" prefHeight="234.0" prefWidth="6.0" />
+      <Text layoutX="799.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total       :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="799.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="798.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance   :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="798.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash        :">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="totTxtFeild" layoutX="886.0" layoutY="443.0" prefHeight="25.0" prefWidth="120.0" />
+      <JFXTextField fx:id="discountTxtFeild" layoutX="886.0" layoutY="489.0" prefHeight="25.0" prefWidth="120.0" />
+      <JFXTextField fx:id="balanceTxtFeild" layoutX="894.0" layoutY="536.0" prefHeight="25.0" prefWidth="120.0" />
+      <JFXTextField fx:id="cashRecievedTxtFeild" layoutX="894.0" layoutY="577.0" prefHeight="25.0" prefWidth="120.0" promptText="cash recieved" />
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#343b40" height="72.0" layoutX="37.0" layoutY="355.0" stroke="#e1d0d0" strokeType="INSIDE" width="993.0" />
+      <JFXButton fx:id="addBtn" layoutX="129.0" layoutY="362.0" onAction="#addBtnOnActionListner" prefHeight="58.0" prefWidth="199.0" style="-fx-background-color: #05c46b;" text="Add to Cart">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearBtn" layoutX="337.0" layoutY="362.0" onAction="#clearBtnOnActionListner" prefHeight="58.0" prefWidth="199.0" style="-fx-background-color: #ffdd59;" text="Clear Cart">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="updateBtn" layoutX="546.0" layoutY="362.0" onAction="#updateBtnOnActionListner" prefHeight="58.0" prefWidth="199.0" style="-fx-background-color: #4bcffa;" text="Update Cart">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="removeBtn" layoutX="758.0" layoutY="362.0" onAction="#removeBtnOnActionListner" prefHeight="58.0" prefWidth="199.0" style="-fx-background-color: #ef5777;" text="Remove Order">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="49.0" layoutY="362.0">
+         <image>
+            <Image url="@assets/Logo2%20(1).png" />
+         </image>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="957.0" layoutY="362.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+         <effect>
+            <Glow level="0.97" />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="52.0" arcWidth="52.0" fill="#eee2e2" height="80.0" layoutX="32.0" layoutY="6.0" stroke="#fffafa" strokeType="INSIDE" width="1025.0" />
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="84.0" layoutY="16.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+      </ImageView>
+      <Text fill="#1e1d1d" layoutX="154.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place Order DashBoard">
+         <font>
+            <Font name="Algerian" size="62.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="931.0" layoutY="16.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="71.0" layoutX="822.0" layoutY="614.0">
+         <image>
+            <Image url="@../assets/delete.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXButton fx:id="backBtn" layoutX="886.0" layoutY="625.0" onAction="#backBtnOnActionListner" prefHeight="48.0" prefWidth="120.0" style="-fx-background-color: #f53b57;" text="Back">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="52.0" layoutY="362.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

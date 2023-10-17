@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1000.0" style="-fx-background-color: #485460;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.Item">
+   <children>
+      <ImageView fitHeight="619.0" fitWidth="1019.0" layoutX="-7.0" layoutY="-5.0">
+         <image>
+            <Image url="@../assets/shirt-mockup-concept-with-plain-clothing%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="551.0" layoutX="14.0" layoutY="27.0" opacity="0.61" stroke="#ebebeb" strokeType="INSIDE" width="954.0" />
+      <Rectangle arcHeight="52.0" arcWidth="52.0" fill="#c3afaf" height="80.0" layoutX="136.0" layoutY="39.0" stroke="#fffafa" strokeType="INSIDE" width="730.0" />
+      <Text fill="#1e1d1d" layoutX="194.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item DashBoard">
+         <font>
+            <Font name="Algerian" size="76.0" />
+         </font>
+      </Text>
+      <ScrollPane layoutX="28.0" layoutY="141.0" prefHeight="215.0" prefWidth="881.0">
+         <content>
+            <JFXTreeTableView fx:id="itemTbl" prefHeight="214.0" prefWidth="884.0">
+               <columns>
+                  <TreeTableColumn fx:id="itemCodeClum" prefWidth="75.0" text="ITEM CODE" />
+                  <TreeTableColumn fx:id="desColum" prefWidth="133.0" text="DESCRIPTION" />
+                  <TreeTableColumn fx:id="qtyColunm" prefWidth="74.0" text="QTY" />
+                  <TreeTableColumn fx:id="selligPriceColunm" prefWidth="97.0" text="SELLING PRICE" />
+                  <TreeTableColumn fx:id="BuyingPriceColumn" prefWidth="117.0" text="BUYING PRICE" />
+                  <TreeTableColumn fx:id="sizeColunm" prefWidth="70.0" text="SIZE" />
+                  <TreeTableColumn fx:id="typeColunm" prefWidth="94.0" text="TYPE" />
+                  <TreeTableColumn fx:id="profitColunm" prefWidth="104.0" text="PROFIT" />
+                  <TreeTableColumn prefWidth="119.0" text="SUPPLIER ID" />
+               </columns>
+            </JFXTreeTableView>
+         </content>
+      </ScrollPane>
+      <Text layoutX="58.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item code">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="58.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier" wrappingWidth="94.31347656249994">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="58.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="58.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="59.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buying price">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="itemCodeCmbBox" layoutX="185.0" layoutY="377.0" prefHeight="25.0" prefWidth="132.0" promptText="Select code" />
+      <JFXComboBox fx:id="supplierIdCmbBox" layoutX="185.0" layoutY="410.0" prefHeight="25.0" prefWidth="132.0" promptText="supplier id" />
+      <JFXTextField fx:id="descriptionTxtFeild" layoutX="184.0" layoutY="445.0" text="description" />
+      <JFXComboBox fx:id="qtyCmbBox" layoutX="111.0" layoutY="483.0" prefHeight="25.0" prefWidth="105.0" promptText="Select qty" />
+      <Text layoutX="224.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added qty">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="addQtymbox" layoutX="335.0" layoutY="483.0" prefHeight="25.0" prefWidth="105.0" promptText="Select qty" />
+      <JFXTextField fx:id="buyingPriceTxtFeild" layoutX="195.0" layoutY="525.0" text="Buying price" />
+      <Separator layoutX="466.0" layoutY="370.0" orientation="VERTICAL" prefHeight="188.0" prefWidth="7.0" />
+      <Text layoutX="489.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selling  price">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="sellingPriceTxtFeild" layoutX="625.0" layoutY="377.0" text="Buying price" />
+      <Text layoutX="490.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="typeCmbBox" layoutX="627.0" layoutY="410.0" prefHeight="25.0" prefWidth="132.0" promptText="select id" />
+      <Text layoutX="493.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="sizeCmbBox" layoutX="627.0" layoutY="445.0" prefHeight="25.0" prefWidth="132.0" promptText="select size" />
+      <Text layoutX="493.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profit">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="profitTxtFeild" layoutX="625.0" layoutY="483.0" text="Profit" />
+      <Separator layoutX="791.0" layoutY="376.0" orientation="VERTICAL" prefHeight="188.0" prefWidth="7.0" />
+      <JFXButton fx:id="addBtn" layoutX="814.0" layoutY="369.0" onAction="#addBtnOnActionListner" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #0be881;" text="Add" />
+      <JFXButton fx:id="clearBtn" layoutX="814.0" layoutY="415.0" onAction="#clearBtnOnActionListner" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #ffd32a;" text="Clear" />
+      <JFXButton fx:id="saveBtn" layoutX="815.0" layoutY="463.0" onAction="#saveBtnOnActionListner" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #0fbcf9;" text="Save" />
+      <JFXButton fx:id="backBtn" layoutX="814.0" layoutY="517.0" onAction="#backBtnOnActionListner" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #ef5777;" text="Back" />
+   </children>
+</AnchorPane>

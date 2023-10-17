@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="725.0" prefWidth="1061.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SalseReport">
+   <children>
+      <ImageView fitHeight="737.0" fitWidth="1126.0" layoutX="-8.0">
+         <image>
+            <Image url="@../assets/shop%20image.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="684.0" layoutX="27.0" layoutY="38.0" opacity="0.65" stroke="WHITE" strokeType="INSIDE" width="1022.0" />
+      <ImageView fitHeight="57.0" fitWidth="71.0" layoutX="59.0" layoutY="114.0">
+         <image>
+            <Image url="@../assets/delete.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXButton fx:id="backBtn" layoutX="119.0" layoutY="120.0" onAction="#backBtnOnActionListner" prefHeight="7.0" prefWidth="120.0" style="-fx-background-color: #f53b57;" text="Back">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" height="258.0" layoutX="59.0" layoutY="183.0" opacity="0.86" stroke="#8d2828" strokeType="INSIDE" width="442.0" />
+      <Text fill="#e4dcdc" layoutX="86.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFIT               :" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="31.0" />
+         </font>
+      </Text>
+      <Text fill="#05c46b" layoutX="329.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40,000" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="31.0" />
+         </font>
+      </Text>
+      <Text fill="#e4dcdc" layoutX="86.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALES COUNT  :" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="31.0" />
+         </font>
+      </Text>
+      <Text fill="#05c46b" layoutX="329.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="31.0" />
+         </font>
+      </Text>
+      <Text fill="#e4dcdc" layoutX="86.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALES                 :" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="31.0" />
+         </font>
+      </Text>
+      <Text fill="#ffd32a" layoutX="329.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15,450/=" wrappingWidth="243.0">
+         <font>
+            <Font name="Times New Roman" size="31.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" height="258.0" layoutX="555.0" layoutY="165.0" opacity="0.86" stroke="#8d2828" strokeType="INSIDE" width="465.0" />
+      <JFXButton fx:id="dailyReportrBtn" layoutX="586.0" layoutY="178.0" onAction="#dailyReportrBtnOnActionListner" prefHeight="46.0" prefWidth="403.0" style="-fx-background-color: #4bcffa;" text="DAILY REPORT">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="monthlyReportrBtn" layoutX="586.0" layoutY="237.0" onAction="#monthlyReportrBtnOnActionListner" prefHeight="46.0" prefWidth="403.0" style="-fx-background-color: #ffdd59;" text="MONTHLY REPORT">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="annualReportBtn" layoutX="586.0" layoutY="300.0" onAction="#annualReportBtnOnActionListner" prefHeight="46.0" prefWidth="403.0" style="-fx-background-color: #ef5777;" text="ANNUAL REPORT">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="dailyReturnsBtn" layoutX="586.0" layoutY="361.0" onAction="#dailyReturnsBtnOnActionListner" prefHeight="46.0" prefWidth="403.0" style="-fx-background-color: #0be881;" text="DAILY RETURNS">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </JFXButton>
+      <BubbleChart fx:id="chart" layoutX="38.0" layoutY="439.0" prefHeight="284.0" prefWidth="967.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BubbleChart>
+      <Rectangle arcHeight="52.0" arcWidth="52.0" fill="#eee2e2" height="80.0" layoutX="40.0" layoutY="34.0" stroke="#fffafa" strokeType="INSIDE" width="959.0" />
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="59.0" layoutY="43.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+      </ImageView>
+      <Text fill="#1e1d1d" layoutX="124.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sALES REPORT DASHBOARD">
+         <font>
+            <Font name="Algerian" size="60.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="916.0" layoutY="42.0">
+         <image>
+            <Image url="@../assets/Logo2%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
